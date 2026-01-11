@@ -19,3 +19,10 @@ and deployment.
 4. Deployment & Environment → `deployment/`
 
 Do NOT skip steps.
+
+## Architecture Overview
+
+This diagram illustrates a modern web architecture running on a bare-metal laptop with Ubuntu 22.04 using Docker: the React frontend is served by Nginx, the Laravel backend runs on PHP-FPM, and PostgreSQL serves as the database. Nginx also functions as a reverse proxy for Laravel API requests, and all containers are connected through an internal Docker network. The frontend is exposed to the public (port 80/443), while the backend and database remain internal, ensuring a secure, scalable, and production-ready setup.
+
+![React + Laravel + PostgreSQL Deployment](deployment-diagram.svg)
+
